@@ -2,3 +2,4 @@
 /list/.DS_Store
 /list/css/.DS_Store
 /list/js/.DS_Store
+CNAME
