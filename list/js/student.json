@@ -1,14 +1,13 @@
-{
-	"Students": [
-		{
-			"id": "1",
-			"vorname": "Bettina",
-			"nachname": "Ranzenbacher",
-			"studiengang": "Mobile Software Development",
-			"Geburtsdatum": "07.08.1999",
-			"wohnort": "Graz",
-			"semester": "3"
-		},
+[
+	{
+		"id": "1",
+		"vorname": "Bettina",
+		"nachname": "Ranzenbacher",
+		"studiengang": "Mobile Software Development",
+		"Geburtsdatum": "07.08.1999",
+		"wohnort": "Graz",
+		"semester": "3"
+	},
     {
       "id": "2",
       "vorname": "Maximilian",
@@ -271,5 +270,4 @@
       "semester": "4"
     }
 		
-	]
-}
+]
