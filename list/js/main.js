@@ -1,24 +1,52 @@
-var json_data = [];
+var json_data = []
 
 window.addEventListener("load", function () {
 	function ajaxLoadData() {
 		if (this.readyState == 4 && this.status == 200) {
 				json_data = JSON.parse(this.responseText);
 				console.log("JSON:");
-				console.log(this.responseText);
+				//console.log(this.responseText);
 				console.log(json_data);
-				console.log(json_data[1].vorname);
+				createTable(json_data);
 		}
 	}
 
 	function loadJSON() {
 		var xhr = new XMLHttpRequest();
-		var path = "https://raw.githubusercontent.com/ozwoldFH/webapp_inventory_WS2019/master/data/data.json";
+		var path = "https://raw.githubusercontent.com/MaximilianSteidl/maximiliansteidl.github.io/master/list/js/student.json";
 		xhr.onreadystatechange = ajaxLoadData;
-		xhr.open("GET", path, false);
+		xhr.open("GET", path, true);
 		xhr.send();
 	}
 
 	loadJSON();
 	
 });
+
+function createTable(json)
+{
+	var html = "";	
+	//table header
+	html += "<tr>"
+	html += "	<th>Vorname</th>"
+	html += "	<th>Nachname</th>"
+	html += "	<th>Studiengang</th>"
+	html += "	<th>Geburtsdatum</th>"
+	html += "	<th>Wohnort</th>"
+    html += "	<th>Semester</th>"
+	html += "</tr>"
+	
+	for (row in json)
+	{
+		html += "<tr>"
+		
+		for(data in json[row])
+		{
+			html +="<td>"+json[row][data]+"</td>";
+		}
+		
+		html += "</tr>"
+	}
+	
+	document.getElementById('student_list').innerHTML = html;
+}
