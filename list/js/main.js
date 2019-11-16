@@ -28,6 +28,7 @@ function createTable(json, suche)
 	var html = "";	
 	//table header
 	html += "<tr>"
+	html += "	<th>ID</th>"
 	html += "	<th>Vorname</th>"
 	html += "	<th>Nachname</th>"
 	html += "	<th>Studiengang</th>"
