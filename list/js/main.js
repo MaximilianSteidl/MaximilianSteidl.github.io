@@ -6,8 +6,8 @@ window.addEventListener("load", function () {
 				json_data = JSON.parse(this.responseText);
 				console.log("JSON:");
 				//console.log(this.responseText);
-				console.log(json_data);
-				createTable(json_data);
+				//console.log(json_data);
+				createTable(json_data, null);
 		}
 	}
 
@@ -23,7 +23,7 @@ window.addEventListener("load", function () {
 	
 });
 
-function createTable(json)
+function createTable(json, suche)
 {
 	var html = "";	
 	//table header
@@ -38,6 +38,25 @@ function createTable(json)
 	
 	for (row in json)
 	{
+		if(suche != null)
+		{
+			var contains = false;
+			for(data in json[row])
+			{
+				if(json[row][data].indexOf(suche) != -1)
+				{
+					//row found
+					contains = true;
+				}
+			}
+
+			if(!contains)
+			{
+				//skips this line
+				continue;
+			}
+		}
+		
 		html += "<tr>"
 		
 		for(data in json[row])
@@ -49,4 +68,11 @@ function createTable(json)
 	}
 	
 	document.getElementById('student_list').innerHTML = html;
+}
+
+function suchen()
+{
+	var input = document.getElementById("suchfeld").value;
+	createTable(json_data, input);
+	
 }
