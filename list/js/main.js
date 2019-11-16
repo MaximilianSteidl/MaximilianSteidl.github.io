@@ -24,7 +24,7 @@ window.addEventListener("load", function () {
 });
 
 function createTable(json, suche)
-{
+{ 
 	var html = "";	
 	//table header
 	html += "<tr>"
