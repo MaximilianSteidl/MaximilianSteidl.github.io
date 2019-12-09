@@ -13,7 +13,7 @@ window.addEventListener("load", function () {
 
 	function loadJSON() {
 		var xhr = new XMLHttpRequest();
-		var path = "https://github.com/MaximilianSteidl/supremedev_backend/";
+		var path = "Localhost:8080";
 		xhr.onreadystatechange = ajaxLoadData;
 		xhr.open("GET", path);
 		xhr.send();
