@@ -13,9 +13,9 @@ window.addEventListener("load", function () {
 
 	function loadJSON() {
 		var xhr = new XMLHttpRequest();
-		var path = "https://raw.githubusercontent.com/MaximilianSteidl/maximiliansteidl.github.io/master/Sprint1/list/js/student.json";
+		var path = "http://localhost:8080/test/";
 		xhr.onreadystatechange = ajaxLoadData;
-		xhr.open("GET", path, true);
+		xhr.open("GET", path);
 		xhr.send();
 	}
 
@@ -29,6 +29,7 @@ function createTable(json, suche)
 	//table header
 	html += "<tr>"
 	html += "	<th>ID</th>"
+	html += "	<th>StudentID</th>"
 	html += "	<th>Vorname</th>"
 	html += "	<th>Nachname</th>"
 	html += "	<th>Studiengang</th>"
