@@ -13,7 +13,7 @@ window.addEventListener("load", function () {
 
 	function loadJSON() {
 		var xhr = new XMLHttpRequest();
-		var path = "https://raw.githubusercontent.com/MaximilianSteidl/maximiliansteidl.github.io/master/list/js/student.json";
+		var path = "https://raw.githubusercontent.com/MaximilianSteidl/maximiliansteidl.github.io/master/Sprint1/list/js/student.json";
 		xhr.onreadystatechange = ajaxLoadData;
 		xhr.open("GET", path, true);
 		xhr.send();
