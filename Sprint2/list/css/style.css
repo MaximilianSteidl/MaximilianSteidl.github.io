@@ -1,21 +1,55 @@
-h1 {
-  color: #3366ff
+body {
+  margin-left: 30px;
+  margin-right: 30px;
 }
- 
+
+h1 {
+  color: black;
+  font-family: "Helvetica", Times, serif;
+  font-size: 50px;
+}
+
+img {
+  width: 300px;
+  float: right;
+}
 p {
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Helvetica", Times, serif;
+  color: black;
+}
+
+i{
+  color: black;
 }
 
 input {
-  font-faily: "Calibir", Times, serif;
- 
-  color: blue;
+  font-faily: "Helvetica", Times, serif;
+  color: black;
+  width: 500px;
+  padding: 15px;
+}
+
+div {
+  font-family: "Helvetica", Times, serif;
+  color: black;
+  text-decoration: none;
+}
+
+form {
+  height: 50px;
 }
 
 table {
 	width : 100% ;
 	text-align:left;
+  font-family: "Helvetica", Times, serif;
+  background-color: black;
 }
 
-tr:nth-child(even) {background: #f5f2fa}
-tr:nth-child(odd) {background: #FFF}
+th {
+  color: #cc0033;
+  background-color: #a8a8a8
+}
+
+tr:nth-child(even) {background: #f8f8f8}
+tr:nth-child(odd) {background: #f8f8f8}
