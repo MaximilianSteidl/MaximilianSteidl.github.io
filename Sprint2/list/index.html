@@ -7,21 +7,20 @@
 		<script type="text/javascript" src="js/main.js"></script>
 		<!-- include font awesome -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head> 
-	
+</head>
+
+
 <body>
+	<img src="FHJ_Logo.jpg" alt="FH-Logo">
 	<h1>Studentenliste</h1>
 
-	<input type = "text" id = "suchfeld" placeholder="Suche..."/>
-	<button onclick="suchen()">Suchen!</button>
+	<input type = "text" id = "suchfeld" placeholder="Suche..." onkeyup="suchen()"/>
+	<br>	<br>
+	<table id="student_list"></table>
 	<br>
 
-	<table id="student_list"></table>
+	<div>
+	<a href="insertData.html">  Nutzer hinzufügen  </a>
+</div>
 
-	<form action="insertData.html">
-		<input type="submit" value="new user" />
-	</form>
-
-</body>
 </html>
- 

@@ -20,12 +20,12 @@ window.addEventListener("load", function () {
 	}
 
 	loadJSON();
-	
+
 });
 
 function createTable(json, suche)
-{ 
-	var html = "";	
+{
+	var html = "";
 	//table header
 	html += "<tr>"
 	html += "	<th>ID</th>"
@@ -37,7 +37,7 @@ function createTable(json, suche)
     html += "	<th>Semester</th>"
 	html += "	<th>Edit</th>"
 	html += "</tr>"
-	
+
 	for (row in json)
 	{
 		if(suche != null)
@@ -58,18 +58,18 @@ function createTable(json, suche)
 				continue;
 			}
 		}
-		
+
 		html += "<tr>"
-		
+
 		for(data in json[row])
 		{
 			html +="<td>"+json[row][data]+"</td>";
-			
+
 		}
-		html += '<td><a href= "insertData.html"><i class="fa fa-edit"></a></i>'
+		html += '<td><a href= "insertData.html"><i class="fa fa-pencil"></a></i>'
 		html += "</tr>"
 	}
-	
+
 	document.getElementById('student_list').innerHTML = html;
 }
 
@@ -77,5 +77,5 @@ function suchen()
 {
 	var input = document.getElementById("suchfeld").value;
 	createTable(json_data, input);
-	
+
 }
