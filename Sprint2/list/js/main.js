@@ -13,7 +13,7 @@ window.addEventListener("load", function () {
 
 	function loadJSON() {
 		var xhr = new XMLHttpRequest();
-		var path = "http://localhost:8080/test/";
+		var path = "https://github.com/MaximilianSteidl/supremedev_backend";
 		xhr.onreadystatechange = ajaxLoadData;
 		xhr.open("GET", path);
 		xhr.send();
@@ -28,7 +28,7 @@ function createTable(json, suche)
 	var html = "";
 	//table header
 	html += "<tr>"
-	html += "	<th>ID</th>"
+	//html += "	<th>ID</th>"
 	html += "	<th>StudentID</th>"
 	html += "	<th>Vorname</th>"
 	html += "	<th>Nachname</th>"
