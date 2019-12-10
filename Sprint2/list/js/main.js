@@ -74,7 +74,7 @@ function createTable(json, suche)
 			}
 		}
 		var id = json[row]._id;
-		html += '<td><a href= "insertData.html?id='+id+'"><i class="fa fa-pencil"></a></i>'
+		html += '<td><a href= "insertData.html?uebergabe_id='+id+'"><i class="fa fa-pencil"></a></i>'
 		html += "</tr>"
 	}
 

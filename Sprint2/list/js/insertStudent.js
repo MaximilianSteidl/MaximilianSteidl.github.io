@@ -32,7 +32,7 @@ window.addEventListener("load", function () {
 		return urlparameter;
 	}
 	
-	id = getUrlParam('id','no_id');
+	id = getUrlParam('uebergabe_id','no_id');
 	
 	if(id == "no_id" )
 	{
