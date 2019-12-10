@@ -54,7 +54,8 @@ function setValues(json)
 	for (row in json)
 	{
 		if (json[row]._id == id)
-		{	console.log(json);
+		{	//console.log(json);
+			document.getElementById("id")       .value = json[row].Student_id;
 			document.getElementById("firstname").value = json[row].vorname;
 			document.getElementById("lastname") .value = json[row].nachname;
 			document.getElementById("course")   .value = json[row].studiengang;
