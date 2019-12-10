@@ -28,7 +28,7 @@ function createTable(json, suche)
 	var html = "";
 	//table header
 	html += "<tr>"
-	html += "	<th>ID</th>"
+	//html += "	<th sytle='display: none;'>ID</th>"
 	html += "	<th>StudentID</th>"
 	html += "	<th>Vorname</th>"
 	html += "	<th>Nachname</th>"
@@ -46,10 +46,13 @@ function createTable(json, suche)
 			var contains = false;
 			for(data in json[row])
 			{
-				if(json[row][data].indexOf(suche) != -1)
+				if(data != '_id')
 				{
-					//row found
-					contains = true;
+					if(json[row][data].indexOf(suche) != -1)
+					{	
+						//row found
+						contains = true;
+					}
 				}
 			}
 
@@ -64,10 +67,14 @@ function createTable(json, suche)
 
 		for(data in json[row])
 		{
-			html +="<td>"+json[row][data]+"</td>";
-
+			if(data != '_id')
+			{
+				//Debugging: html +="<td>"+json[row][data]+"+Row: " +row +" Data: '" + data+ "'</td>";
+				html +="<td>"+ json[row][data]+ "</td>";
+			}
 		}
-		html += '<td><a href= "insertData.html"><i class="fa fa-pencil"></a></i>'
+		var id = json[row]._id;
+		html += '<td><a href= "insertData.html?id='+id+'"><i class="fa fa-pencil"></a></i>'
 		html += "</tr>"
 	}
 
