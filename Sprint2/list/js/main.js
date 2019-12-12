@@ -33,9 +33,9 @@ function createTable(json, suche)
 	html += "	<th>Vorname</th>"
 	html += "	<th>Nachname</th>"
 	html += "	<th>Studiengang</th>"
-	html += "	<th>Geburtsdatum</th>"
 	html += "	<th>Wohnort</th>"
     html += "	<th>Semester</th>"
+	html += "	<th>Geburtsdatum</th>"
 	html += "	<th>Edit</th>"
 	html += "</tr>"
 
@@ -67,7 +67,7 @@ function createTable(json, suche)
 
 		for(data in json[row])
 		{
-			if(data != '_id')
+			if(data != '_id' && data != '__v')
 			{
 				//Debugging: html +="<td>"+json[row][data]+"+Row: " +row +" Data: '" + data+ "'</td>";
 				html +="<td>"+ json[row][data]+ "</td>";
