@@ -47,7 +47,21 @@ window.addEventListener("load", function () {
 
 });
 
-
+/*function getDataJson()
+{
+		var data_json = { 
+	    'id'          : id,
+		'Student_id'  : document.getElementById("id").value,
+		'vorname'     : document.getElementById("firstname").value,
+		"nachname"    : document.getElementById("lastname").value,
+		"studiengang" : document.getElementById("course").value,
+		"wohnort"     : document.getElementById("home").value,
+		"semester"    : document.getElementById("semester").value,
+		"birthday"    : document.getElementById("birthday").value.split("-").reverse().join(".")
+		};
+		
+		return data_json;
+}*/
 function setValues(json)
 {
 	for (row in json)
@@ -79,7 +93,7 @@ function user_update()
 		"semester"    : document.getElementById("semester").value,
 		"birthday"    : document.getElementById("birthday").value.split("-").reverse().join(".")
 		};
-	
+		
 	$.ajax({
 		type: 'POST',
 		url: 'http://localhost:8080/updateStudent',
@@ -93,5 +107,23 @@ function user_update()
 
 function user_hinzufuegen()
 {
-	alert("add");
+	var data_json = { 
+	    'id'          : id,
+		'Student_id'  : document.getElementById("id").value,
+		'vorname'     : document.getElementById("firstname").value,
+		"nachname"    : document.getElementById("lastname").value,
+		"studiengang" : document.getElementById("course").value,
+		"wohnort"     : document.getElementById("home").value,
+		"semester"    : document.getElementById("semester").value,
+		"birthday"    : document.getElementById("birthday").value.split("-").reverse().join(".")
+		};
+		
+	$.ajax({
+		type: 'POST',
+		url: 'http://localhost:8080/insertStudent',
+		data: data_json,
+		success: function(msg){
+			console.log("success");
+		}
+	});	
 }
