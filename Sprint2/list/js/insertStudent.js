@@ -69,16 +69,21 @@ function setValues(json)
 
 function user_update()
 {
-	$.post(
-	  "http://localhost:8080/updateStudent",
-	  { id : id,
-		Student_id  : document.getElementById("id").value,
-		vorname     : document.getElementById("firstname").value },
-	  function(data) {
-		alert("Response: " + data);
-	  }
-	);
-			
+	var data_json = { 
+	    'id'          : id,
+		'Student_id'  : document.getElementById("id").value,
+		'vorname'     : document.getElementById("firstname").value };
+		
+	//alert(data_json);
+	
+	$.ajax({
+		type: 'POST',
+		url: 'http://localhost:8080/updateStudent',
+		data: data_json,
+		success: function(msg){
+			alert('wow' + msg);
+		}
+	});	
 			
 }
 
