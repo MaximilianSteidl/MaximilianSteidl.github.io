@@ -72,16 +72,20 @@ function user_update()
 	var data_json = { 
 	    'id'          : id,
 		'Student_id'  : document.getElementById("id").value,
-		'vorname'     : document.getElementById("firstname").value };
-		
-	//alert(data_json);
+		'vorname'     : document.getElementById("firstname").value,
+		"nachname"    : document.getElementById("lastname").value,
+		"studiengang" : document.getElementById("course").value,
+		"wohnort"     : document.getElementById("home").value,
+		"semester"    : document.getElementById("semester").value,
+		"birthday"    : document.getElementById("birthday").value.split("-").reverse().join(".")
+		};
 	
 	$.ajax({
 		type: 'POST',
 		url: 'http://localhost:8080/updateStudent',
 		data: data_json,
 		success: function(msg){
-			alert('wow' + msg);
+			console.log("success");
 		}
 	});	
 			

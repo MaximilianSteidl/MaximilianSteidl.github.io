@@ -6,7 +6,7 @@ window.addEventListener("load", function () {
 				json_data = JSON.parse(this.responseText);
 				console.log("JSON:");
 				//console.log(this.responseText);
-				//console.log(json_data);
+				console.log(json_data);
 				createTable(json_data, null);
 		}
 	}
