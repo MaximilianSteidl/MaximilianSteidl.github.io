@@ -15,25 +15,25 @@
 <div class="row">
 <form  action="index.html" method="post">
   <div class="column">
-  <p>ID:</p>
+  <p>Studenten Nummer: <span class="asteriks">*</span></p>
   <input type="text" name="id" id="id">
-  <p>Vorname:</p>
+  <p>Vorname: <span class="asteriks">*</span></p>
   <input type="text" name="firstname" id="firstname">
-  <p>Nachname:</p>
+  <p>Nachname: <span class="asteriks">*</span></p>
   <input type="text" name="lastname" id="lastname">
-  <p>Studiengang:</p>
+  <p>Studiengang: <span class="asteriks">*</span></p>
   <input type="text" name="course" id="course">
   </div>
   <div class="column">
-  <p>Geburtsdatum:</p>
+  <p>Geburtsdatum: <span class="asteriks">*</span></p>
   <input type="date" name="birthday" id="birthday">
-  <p>Wohnort:</p>
+  <p>Wohnort: <span class="asteriks">*</span></p>
   <input type="text" name="home" id="home"><br>
-  <p>Semester:</p>
+  <p>Semester: <span class="asteriks">*</span></p>
   <input type="text" name="semester" id="semester"><br><br>
 
-	<button onclick="user_update()" id="btn_upd">Student updaten  </button>
-	<button onclick="user_hinzufuegen()" id="btn_add">Student hinzufügen  </button>
+	<button type="button" onclick="user_update()" id="btn_upd">Student updaten  </button>
+	<button type="button" onclick="user_hinzufuegen()" id="btn_add">Student hinzufügen  </button>
 
 </div>
 

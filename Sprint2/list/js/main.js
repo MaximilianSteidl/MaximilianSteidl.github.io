@@ -4,9 +4,9 @@ window.addEventListener("load", function () {
 	function ajaxLoadData() {
 		if (this.readyState == 4 && this.status == 200) {
 				json_data = JSON.parse(this.responseText);
-				console.log("JSON:");
+				//console.log("JSON:");
 				//console.log(this.responseText);
-				console.log(json_data);
+				//console.log(json_data);
 				createTable(json_data, null);
 		}
 	}
@@ -29,7 +29,7 @@ function createTable(json, suche)
 	//table header
 	html += "<tr>"
 	//html += "	<th sytle='display: none;'>ID</th>"
-	html += "	<th>StudentID</th>"
+	html += "	<th>Studenten Nummer</th>"
 	html += "	<th>Vorname</th>"
 	html += "	<th>Nachname</th>"
 	html += "	<th>Studiengang</th>"

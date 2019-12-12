@@ -62,6 +62,33 @@ window.addEventListener("load", function () {
 		
 		return data_json;
 }*/
+
+function validateFields()
+{
+		if( document.getElementById("id")       .value == "" ||
+			document.getElementById("firstname").value == "" ||
+			document.getElementById("lastname") .value == "" ||
+			document.getElementById("course")   .value == "" ||
+			document.getElementById("home")     .value == "" ||
+			document.getElementById("semester") .value == "" ||
+			document.getElementById("birthday") .value == "" ||
+			document.getElementById("id")       .value == null ||
+			document.getElementById("firstname").value == null ||
+			document.getElementById("lastname") .value == null ||
+			document.getElementById("course")   .value == null ||
+			document.getElementById("home")     .value == null ||
+			document.getElementById("semester") .value == null ||
+			document.getElementById("birthday") .value == null)
+			{
+				alert("bitte alle Felder ausfüllen");
+				return false;
+			}
+			else
+			{
+				return true;
+			}
+}
+
 function setValues(json)
 {
 	for (row in json)
@@ -83,47 +110,55 @@ function setValues(json)
 
 function user_update()
 {
-	var data_json = { 
-	    'id'          : id,
-		'Student_id'  : document.getElementById("id").value,
-		'vorname'     : document.getElementById("firstname").value,
-		"nachname"    : document.getElementById("lastname").value,
-		"studiengang" : document.getElementById("course").value,
-		"wohnort"     : document.getElementById("home").value,
-		"semester"    : document.getElementById("semester").value,
-		"birthday"    : document.getElementById("birthday").value.split("-").reverse().join(".")
-		};
-		
-	$.ajax({
-		type: 'POST',
-		url: 'http://localhost:8080/updateStudent',
-		data: data_json,
-		success: function(msg){
-			console.log("success");
-		}
-	});	
+	if (validateFields())
+	{
+		var data_json = { 
+			'id'          : id,
+			'Student_id'  : document.getElementById("id").value,
+			'vorname'     : document.getElementById("firstname").value,
+			"nachname"    : document.getElementById("lastname").value,
+			"studiengang" : document.getElementById("course").value,
+			"wohnort"     : document.getElementById("home").value,
+			"semester"    : document.getElementById("semester").value,
+			"birthday"    : document.getElementById("birthday").value.split("-").reverse().join(".")
+			};
 			
+		$.ajax({
+			type: 'POST',
+			url: 'http://localhost:8080/updateStudent',
+			data: data_json,
+			success: function(msg){
+				console.log("success");
+			}
+		});	
+		window.location.href = 'index.html';		
+	}
 }
 
 function user_hinzufuegen()
 {
-	var data_json = { 
-	    'id'          : id,
-		'Student_id'  : document.getElementById("id").value,
-		'vorname'     : document.getElementById("firstname").value,
-		"nachname"    : document.getElementById("lastname").value,
-		"studiengang" : document.getElementById("course").value,
-		"wohnort"     : document.getElementById("home").value,
-		"semester"    : document.getElementById("semester").value,
-		"birthday"    : document.getElementById("birthday").value.split("-").reverse().join(".")
-		};
-		
-	$.ajax({
-		type: 'POST',
-		url: 'http://localhost:8080/insertStudent',
-		data: data_json,
-		success: function(msg){
-			console.log("success");
-		}
-	});	
+	if (validateFields())
+	{
+		var data_json = { 
+			'id'          : id,
+			'Student_id'  : document.getElementById("id").value,
+			'vorname'     : document.getElementById("firstname").value,
+			"nachname"    : document.getElementById("lastname").value,
+			"studiengang" : document.getElementById("course").value,
+			"wohnort"     : document.getElementById("home").value,
+			"semester"    : document.getElementById("semester").value,
+			"birthday"    : document.getElementById("birthday").value.split("-").reverse().join(".")
+			};
+			
+		$.ajax({
+			type: 'POST',
+			url: 'http://localhost:8080/insertStudent',
+			data: data_json,
+			complete: function(msg){
+				console.log("success");
+			}
+		});	
+		window.location.href = 'index.html';
+	}
+
 }
