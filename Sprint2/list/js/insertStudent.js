@@ -69,7 +69,17 @@ function setValues(json)
 
 function user_update()
 {
-	alert("update id:" + id);
+	$.post(
+	  "http://localhost:8080/updateStudent",
+	  { id : id,
+		Student_id  : document.getElementById("id").value,
+		vorname     : document.getElementById("firstname").value },
+	  function(data) {
+		alert("Response: " + data);
+	  }
+	);
+			
+			
 }
 
 function user_hinzufuegen()
