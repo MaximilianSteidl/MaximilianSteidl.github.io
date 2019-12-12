@@ -8,9 +8,9 @@ window.addEventListener("load", function () {
 		}
 	}
 
-	function loadJSON() {
+	function loadJSON(StudentenID) {
 		var xhr = new XMLHttpRequest();
-		var path = "http://localhost:8080";
+		var path = "http://localhost:8080/getStudent?id="+StudentenID;
 		xhr.onreadystatechange = ajaxLoadData;
 		xhr.open("GET", path);
 		xhr.send();
@@ -42,9 +42,8 @@ window.addEventListener("load", function () {
 	{
 		document.getElementById("btn_add").style.display = 'none';
 		document.getElementById("title").innerHTML = "Student updaten";
+		loadJSON(id);
 	}
-	
-	loadJSON();
 
 });
 
