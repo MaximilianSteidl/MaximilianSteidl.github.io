@@ -13,6 +13,12 @@ img {
   width: 300px;
   float: right;
 }
+img.icon{
+  width: 50px;
+  position: relative;
+  float: none;
+  top: 20px;
+}
 p {
   font-family: "Helvetica", Times, serif;
   color: black;
