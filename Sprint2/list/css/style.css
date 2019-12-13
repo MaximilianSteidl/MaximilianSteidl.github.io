@@ -19,6 +19,7 @@ img.icon{
   float: none;
   top: 20px;
   cursor: pointer;
+  margin-left: 10px;
 }
 p {
   font-family: "Helvetica", Times, serif;
