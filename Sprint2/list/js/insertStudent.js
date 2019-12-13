@@ -97,7 +97,7 @@ function validateFields()
 					}
 					else
 					{
-						return true;
+							return true;
 					}
 			}
 }
