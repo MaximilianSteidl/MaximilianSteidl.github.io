@@ -80,12 +80,25 @@ function validateFields()
 			document.getElementById("semester") .value == null ||
 			document.getElementById("birthday") .value == null)
 			{
-				alert("bitte alle Felder ausfüllen");
+				alert("bitte alle Felder richtig ausfuellen");
 				return false;
 			}
 			else
 			{
-				return true;
+				if (document.getElementById("id")       .value.length > 30 ||
+					document.getElementById("firstname").value.length > 30 ||
+					document.getElementById("lastname") .value.length > 30 ||
+					document.getElementById("course")   .value.length > 30 ||
+					document.getElementById("home")     .value.length > 30 ||
+					document.getElementById("semester") .value.length > 30 ||
+					document.getElementById("birthday") .value.length > 30)
+					{
+						alert("Maximale Laenge: 30 Zeichen!");
+					}
+					else
+					{
+						return true;
+					}
 			}
 }
 
