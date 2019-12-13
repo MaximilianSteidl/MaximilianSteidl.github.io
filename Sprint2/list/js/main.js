@@ -48,7 +48,8 @@ function createTable(json, suche)
 			{
 				if(data != '_id')
 				{
-					if(json[row][data].indexOf(suche) != -1)
+					var value = json[row][data] + ""; //convert to string
+					if(value.indexOf(suche) != -1)
 					{	
 						//row found
 						contains = true;
