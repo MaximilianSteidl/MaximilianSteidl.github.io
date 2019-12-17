@@ -140,11 +140,11 @@ function user_update()
 			type: 'POST',
 			url: 'http://localhost:8080/updateStudent',
 			data: data_json,
-			success: function(msg){
-				console.log("success");
+			success: function(){
+				window.location.href = 'index.html';
 			}
 		});	
-		window.location.href = 'index.html';		
+				
 	}
 }
 
@@ -167,11 +167,11 @@ function user_hinzufuegen()
 			type: 'POST',
 			url: 'http://localhost:8080/insertStudent',
 			data: data_json,
-			complete: function(msg){
-				console.log("success");
+			success: function(){
+				window.location.href = 'index.html';
 			}
 		});	
-		window.location.href = 'index.html';
+		
 	}
 
 }
