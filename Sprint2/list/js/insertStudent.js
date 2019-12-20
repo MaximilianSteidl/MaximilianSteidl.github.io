@@ -3,7 +3,7 @@ var id;
 window.addEventListener("load", function () {
 	function ajaxLoadData() {
 		if (this.readyState == 4 && this.status == 200) {
-				json_data = JSON.parse(this.responseText);
+				var json_data = JSON.parse(this.responseText);
 				setValues(json_data);
 		}
 	}
@@ -65,20 +65,20 @@ window.addEventListener("load", function () {
 
 function validateFields()
 {
-		if( document.getElementById("id")       .value == "" ||
-			document.getElementById("firstname").value == "" ||
-			document.getElementById("lastname") .value == "" ||
-			document.getElementById("course")   .value == "" ||
-			document.getElementById("home")     .value == "" ||
-			document.getElementById("semester") .value == "" ||
-			document.getElementById("birthday") .value == "" ||
-			document.getElementById("id")       .value == null ||
-			document.getElementById("firstname").value == null ||
-			document.getElementById("lastname") .value == null ||
-			document.getElementById("course")   .value == null ||
-			document.getElementById("home")     .value == null ||
-			document.getElementById("semester") .value == null ||
-			document.getElementById("birthday") .value == null)
+		if( document.getElementById("id")       .value === "" ||
+			document.getElementById("firstname").value === "" ||
+			document.getElementById("lastname") .value === "" ||
+			document.getElementById("course")   .value === "" ||
+			document.getElementById("home")     .value === "" ||
+			document.getElementById("semester") .value === "" ||
+			document.getElementById("birthday") .value === "" ||
+			document.getElementById("id")       .value === null ||
+			document.getElementById("firstname").value === null ||
+			document.getElementById("lastname") .value === null ||
+			document.getElementById("course")   .value === null ||
+			document.getElementById("home")     .value === null ||
+			document.getElementById("semester") .value === null ||
+			document.getElementById("birthday") .value === null)
 			{
 				alert("bitte alle Felder richtig ausfuellen");
 				return false;
@@ -104,7 +104,7 @@ function validateFields()
 
 function setValues(json)
 {
-	for (row in json)
+	for (var row in json)
 	{
 		if (json[row]._id == id)
 		{	//console.log(json);
