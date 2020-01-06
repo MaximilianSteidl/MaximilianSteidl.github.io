@@ -1,0 +1,273 @@
+[
+	{
+		"id": "1",
+		"vorname": "Bettina",
+		"nachname": "Ranzenbacher",
+		"studiengang": "Mobile Software Development",
+		"Geburtsdatum": "07.08.1999",
+		"wohnort": "Graz",
+		"semester": "3"
+	}, 
+    {
+      "id": "2",
+      "vorname": "Maximilian",
+      "nachname": "Steidl",
+      "studiengang": "Mobile Software Development",
+      "Geburtsdatum": "13.08.1998",
+      "wohnort": "Seiersberg",
+      "semester": "3"
+    },
+    {
+      "id": "3",
+      "vorname": "Eva",
+      "nachname": "Metzer",
+      "studiengang": "Business Software Development",
+      "Geburtsdatum": "05.05.1988",
+      "wohnort": "Wien",
+      "semester": "5"
+    },
+    {
+      "id": "4",
+      "vorname": "Lucas",
+      "nachname": "Pallan",
+      "studiengang": "Mobile Software Development",
+      "Geburtsdatum": "12.03.1997",
+      "wohnort": "Graz",
+      "semester": "3"
+    },
+    {
+      "id": "5",
+      "vorname": "Thomas",
+      "nachname": "Reiter",
+      "studiengang": "Business Software Development",
+      "Geburtsdatum": "18.11.1987",
+      "wohnort": "Graz",
+      "semester": "1"
+    },
+    {
+      "id": "6",
+      "vorname": "Lisa",
+      "nachname": "Zirkl",
+      "studiengang": "Business Software Development",
+      "Geburtsdatum": "19.10.1997",
+      "wohnort": "Kapfenberg",
+      "semester": "4"
+    },
+    {
+      "id": "7",
+      "vorname": "Kerstin",
+      "nachname": "Many",
+      "studiengang": "Software Design",
+      "Geburtsdatum": "23.03.1994",
+      "wohnort": "Kapfenberg",
+      "semester": "2"
+    },
+    {
+      "id": "8",
+      "vorname": "Bernd",
+      "nachname": "Sernd",
+      "studiengang": "Informationstechnologien",
+      "Geburtsdatum": "25.12.1985",
+      "wohnort": "Graz",
+      "semester": "4"
+    },
+    {
+      "id": "9",
+      "vorname": "Kristen",
+      "nachname": "Fragerin",
+      "studiengang": "Business Software Development",
+      "Geburtsdatum": "19.09.1997",
+      "wohnort": "Graz",
+      "semester": "6"
+    },
+    {
+      "id": "10",
+      "vorname": "Olaf",
+      "nachname": "Herrreiter",
+      "studiengang": "Mobile Software Development",
+      "Geburtsdatum": "30.03.1982",
+      "wohnort": "Kapfenberg",
+      "semester": "1"
+    },
+    {
+      "id": "11",
+      "vorname": "Greta",
+      "nachname": "Grün",
+      "studiengang": "Informationstechnologien",
+      "Geburtsdatum": "23.04.1999",
+      "wohnort": "Kapfenberg",
+      "semester": "2"
+    },
+    {
+      "id": "12",
+      "vorname": "Jenny",
+      "nachname": "Liebengut",
+      "studiengang": "Software Design",
+      "Geburtsdatum": "19.08.1976",
+      "wohnort": "Wien",
+      "semester": "5"
+    },
+    {
+      "id": "13",
+      "vorname": "Maximilian",
+      "nachname": "Handelsgut",
+      "studiengang": "Informationstechnologien",
+      "Geburtsdatum": "31.12.1993",
+      "wohnort": "Seiersberg",
+      "semester": "1"
+    },
+    {
+      "id": "14",
+      "vorname": "Karl",
+      "nachname": "Lrak",
+      "studiengang": "Software Design",
+      "Geburtsdatum": "20.02.1992",
+      "wohnort": "Graz",
+      "semester": "6"
+    },
+    {
+      "id": "15",
+      "vorname": "Manny",
+      "nachname": "Merreiter",
+      "studiengang": "Informatik",
+      "Geburtsdatum": "18.08.1988",
+      "wohnort": "Seiersberg",
+      "semester": "6"
+    },
+    {
+      "id": "16",
+      "vorname": "Jan",
+      "nachname": "Janus",
+      "studiengang": "Informatik",
+      "Geburtsdatum": "22.02.1984",
+      "wohnort": "Wien",
+      "semester": "5"
+    },
+    {
+      "id": "17",
+      "vorname": "Jenny",
+      "nachname": "Reiter",
+      "studiengang": "Software Design",
+      "Geburtsdatum": "23.09.1989",
+      "wohnort": "Kapfenberg",
+      "semester": "5"
+    },
+    {
+      "id": "18",
+      "vorname": "Karla",
+      "nachname": "Karlich",
+      "studiengang": "Informationstechnologien",
+      "Geburtsdatum": "19.04.1992",
+      "wohnort": "Wien",
+      "semester": "1"
+    },
+    {
+      "id": "19",
+      "vorname": "Nadine",
+      "nachname": "Nährwert",
+      "studiengang": "Mobile Software Development",
+      "Geburtsdatum": "26.09.1993",
+      "wohnort": "Graz",
+      "semester": "2"
+    },
+    {
+      "id": "20",
+      "vorname": "Hubert",
+      "nachname": "Kuhbert",
+      "studiengang": "Business Software Development",
+      "Geburtsdatum": "14.02.1987",
+      "wohnort": "Graz",
+      "semester": "5"
+    },
+    {
+      "id": "21",
+      "vorname": "Leo",
+      "nachname": "Fleher",
+      "studiengang": "Informatik",
+      "Geburtsdatum": "18.06.1982",
+      "wohnort": "Kapfenberg",
+      "semester": "6"
+    },
+    {
+      "id": "22",
+      "vorname": "Julia",
+      "nachname": "Coolia",
+      "studiengang": "Mobile Software Development",
+      "Geburtsdatum": "29.07.1993",
+      "wohnort": "Graz",
+      "semester": "3"
+    },
+    {
+      "id": "23",
+      "vorname": "Maria",
+      "nachname": "Göttl",
+      "studiengang": "Informationstechnologien",
+      "Geburtsdatum": "26.01.1997",
+      "wohnort": "Graz",
+      "semester": "6"
+    },
+    {
+      "id": "24",
+      "vorname": "Simon",
+      "nachname": "Sieger",
+      "studiengang": "Software Design",
+      "Geburtsdatum": "19.09.1999",
+      "wohnort": "Graz",
+      "semester": "3"
+    },
+    {
+      "id": "25",
+      "vorname": "Erich",
+      "nachname": "Ehrlich",
+      "studiengang": "Business Software Development",
+      "Geburtsdatum": "29.12.1989",
+      "wohnort": "Kapfenberg",
+      "semester": "5"
+    },
+    {
+      "id": "26",
+      "vorname": "Immanuel",
+      "nachname": "Kant",
+      "studiengang": "Informatik",
+      "Geburtsdatum": "16.07.1986",
+      "wohnort": "Graz",
+      "semester": "5"
+    },
+    {
+      "id": "27",
+      "vorname": "Hubert",
+      "nachname": "Herrlich",
+      "studiengang": "Software Design",
+      "Geburtsdatum": "10.08.1996 ", 
+      "wohnort": "Wien",
+      "semester": "6"
+    },
+    {
+      "id": "28",
+      "vorname": "Josef",
+      "nachname": "Joseffi",
+      "studiengang": "Informatik",
+      "Geburtsdatum": "26.06.1986",
+      "wohnort": "Kapfenberg",
+      "semester": "3"
+    },
+    {
+      "id": "29",
+      "vorname": "Werner",
+      "nachname": "Wurm",
+      "studiengang": "Mobile Software Development",
+      "Geburtsdatum": "18.08.1988",
+      "wohnort": "Graz",
+      "semester": "1"
+    },
+    {
+      "id": "30",
+      "vorname": "Heinrich",
+      "nachname": "Beinlich",
+      "studiengang": "Software Design",
+      "Geburtsdatum": "27.04.1987",
+      "wohnort": "Graz",
+      "semester": "4"
+    }
+		
+]
