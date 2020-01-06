@@ -97,7 +97,15 @@ function validateFields()
 					}
 					else
 					{
+						var today = new Date();
+						if(Date.parse(document.getElementById("birthday") .value) > today)
+						{
+							alert("Geburtsdatum kann nicht über dem heutigem Datum liegen")
+						}
+						else
+						{
 							return true;
+						}
 					}
 			}
 }
