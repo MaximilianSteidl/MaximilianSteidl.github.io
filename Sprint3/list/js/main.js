@@ -75,7 +75,8 @@ function createTable(json, suche)
 			}
 		}
 		var id = json[row]._id;
-		html += '<td><a href= "insertData.html?uebergabe_id='+id+'"><i class="fa fa-pencil"></a></i>'
+		html += '<td><a href= "insertData.html?uebergabe_id='+id+'" title="edit"><i class="fa fa-pencil"></i></a> '
+		html += '<button onclick="user_delete(\''+id+'\')" title="löschen" class="loeschen_button"><i class="fa fa-trash"></button></td>'
 		html += "</tr>"
 	}
 
@@ -87,4 +88,23 @@ function suchen()
 	var input = document.getElementById("suchfeld").value;
 	createTable(json_data, input);
 
+}
+
+function user_delete(uebergabe_id)
+{	
+	if(confirm("Möchten Sie den Studenten wirklich löschen?"))
+	{
+		var data_json = { 
+			'id'          : uebergabe_id,
+		};
+				
+		$.ajax({
+			type: 'POST',
+			url: 'http://localhost:8080/deleteStudent',
+			data: data_json,
+			success: function(){
+				window.location.href = 'index.html';
+			}
+		});	
+	}
 }

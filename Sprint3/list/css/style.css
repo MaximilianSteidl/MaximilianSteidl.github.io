@@ -73,3 +73,13 @@ th {
 
 tr:nth-child(even) {background: #f8f8f8}
 tr:nth-child(odd) {background: #f8f8f8}
+
+.loeschen_button
+{
+	border: none;
+	background-color: inherit;
+}
+.fa-trash
+{
+	color: #cc0033;;
+}
