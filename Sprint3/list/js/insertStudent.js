@@ -65,7 +65,19 @@ window.addEventListener("load", function () {
 
 function validateFields()
 {
-		if( document.getElementById("id")       .value === "" ||
+	$(".pflichtfeld , #birthday").trigger("focusout");
+	
+	if ($(".fa").length)
+	{
+		alert("Bitte fuellen Sie alle Felder richtig aus! Sie koennen die Fehlermeldungen sehen indem Sie den Mauszeigen ueber das Warnungsdreieck legen");
+		return false;
+	}		
+	else
+	{
+		return true;
+	}
+	
+		/*if( document.getElementById("id")       .value === "" ||
 			document.getElementById("firstname").value === "" ||
 			document.getElementById("lastname") .value === "" ||
 			document.getElementById("course")   .value === "" ||
@@ -107,7 +119,7 @@ function validateFields()
 							return true;
 						}
 					}
-			}
+			}*/
 }
 
 function setValues(json)
@@ -183,6 +195,7 @@ function user_hinzufuegen()
 	}
 }
 
+//validation
 $(document).ready(function(){
 
 	$( ".pflichtfeld" )
@@ -190,23 +203,80 @@ $(document).ready(function(){
 		var v_val = $(this).val();
 		var color = "inherit";
 	    var error_msg = "";
+		var v_after = "";
   
 		
 		if(v_val == "" || v_val == null )
 		{
 			color = "orange";
-			error_msg += "Bitte das Feld Ausfuellen! ";
+			error_msg += "Bitte das Feld ausfuellen! ";
+			v_after = '<i class="fa fa-exclamation-triangle" title="'+error_msg+'"></i>'
 		}
 		
 		if(v_val.length > 30)
 		{
 			color = "orange";
 			error_msg += "Das Feld darf nicht laenger als 30 Zeichen sein! ";
+			v_after = '<i class="fa fa-exclamation-triangle" title="'+error_msg+'"></i>'
 		}
 		
 		$(this).css("border-color", color);
 		$(this).attr("title", error_msg);
 		
+		if(v_after == "")
+		{
+			//check if icon exists and remove italics
+			if($(this).next().hasClass("fa"))
+			{
+				$(this).next().remove();
+			}
+		}
+		else
+		{
+			if(!$(this).next().hasClass("fa"))
+			{
+				$(this).after(v_after);
+			}	
+		}
+	  });
+	  
+	$( "#birthday" )
+	  .focusout(function() {
+		if($(this).val() != "")
+		{
+			var v_val = $(this).val();
+			var color = "inherit";
+			var error_msg = "";
+			var v_after = "";
+			
+			var GivenDate = v_val;
+			var CurrentDate = new Date();
+			GivenDate = new Date(GivenDate);
+			if(GivenDate > CurrentDate){
+				color = "orange";
+				error_msg += "Das Feld darf nicht ueber dem heutigem Datum liegen!";
+				v_after = '<i class="fa fa-exclamation-triangle" title="'+error_msg+'"></i>'
+			}
+			
+			$(this).css("border-color", color);
+			$(this).attr("title", error_msg);
+			
+			if(v_after == "")
+			{
+				//check if icon exists and remove italics
+				if($(this).next().hasClass("fa"))
+				{
+					$(this).next().remove();
+				}
+			}
+			else
+			{
+				if(!$(this).next().hasClass("fa"))
+				{
+					$(this).after(v_after);
+				}		
+			}
+		}
 	  });
 
 })

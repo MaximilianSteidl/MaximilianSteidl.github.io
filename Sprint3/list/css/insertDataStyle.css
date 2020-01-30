@@ -72,3 +72,9 @@ tr:nth-child(odd) {background: #f8f8f8}
 {
 	color: red;
 }
+
+.fa{
+	margin-left: 10px;
+    color: orange;
+    font-size: 25px;
+}
