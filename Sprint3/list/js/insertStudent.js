@@ -76,50 +76,6 @@ function validateFields()
 	{
 		return true;
 	}
-	
-		/*if( document.getElementById("id")       .value === "" ||
-			document.getElementById("firstname").value === "" ||
-			document.getElementById("lastname") .value === "" ||
-			document.getElementById("course")   .value === "" ||
-			document.getElementById("home")     .value === "" ||
-			document.getElementById("semester") .value === "" ||
-			document.getElementById("birthday") .value === "" ||
-			document.getElementById("id")       .value === null ||
-			document.getElementById("firstname").value === null ||
-			document.getElementById("lastname") .value === null ||
-			document.getElementById("course")   .value === null ||
-			document.getElementById("home")     .value === null ||
-			document.getElementById("semester") .value === null ||
-			document.getElementById("birthday") .value === null)
-			{
-				alert("bitte alle Felder richtig ausfuellen");
-				return false;
-			}
-			else
-			{
-				if (document.getElementById("id")       .value.length > 30 ||
-					document.getElementById("firstname").value.length > 30 ||
-					document.getElementById("lastname") .value.length > 30 ||
-					document.getElementById("course")   .value.length > 30 ||
-					document.getElementById("home")     .value.length > 30 ||
-					document.getElementById("semester") .value.length > 30 ||
-					document.getElementById("birthday") .value.length > 30)
-					{
-						alert("Maximale Laenge: 30 Zeichen!");
-					}
-					else
-					{
-						var today = new Date();
-						if(Date.parse(document.getElementById("birthday") .value) > today)
-						{
-							alert("Geburtsdatum kann nicht über dem heutigem Datum liegen")
-						}
-						else
-						{
-							return true;
-						}
-					}
-			}*/
 }
 
 function setValues(json)
