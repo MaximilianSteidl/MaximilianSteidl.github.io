@@ -17,21 +17,21 @@
 <form  action="index.html" method="post">
   <div class="column">
 	<p>Studenten Nummer: <span class="asteriks">*</span></p>
-	<input type="number" name="id" id="id">
+	<input type="number" name="id" id="id" class="pflichtfeld">
 	<p>Vorname: <span class="asteriks">*</span></p>
-	<input type="text" name="firstname" id="firstname">
+	<input type="text" name="firstname" id="firstname" class="pflichtfeld">
 	<p>Nachname: <span class="asteriks">*</span></p>
-	<input type="text" name="lastname" id="lastname">
+	<input type="text" name="lastname" id="lastname" class="pflichtfeld">
 	<p>Studiengang: <span class="asteriks">*</span></p>
-	<input type="text" name="course" id="course">
+	<input type="text" name="course" id="course" class="pflichtfeld">
   </div>
   <div class="column">
 	<p>Geburtsdatum: <span class="asteriks">*</span></p>
-	<input type="date" name="birthday" id="birthday">
+	<input type="date" name="birthday" id="birthday" class="pflichtfeld">
 	<p>Wohnort: <span class="asteriks">*</span></p>
-	<input type="text" name="home" id="home"><br>
+	<input type="text" name="home" id="home" class="pflichtfeld"><br>
 	<p>Semester: <span class="asteriks">*</span></p>
-	<input type="number" name="semester" id="semester"><br><br>
+	<input type="number" name="semester" id="semester" class="pflichtfeld"><br><br>
 
 	<button type="button" onclick="user_update()" id="btn_upd">Student updaten  </button>
 	<button type="button" onclick="user_hinzufuegen()" id="btn_add">Student hinzufügen  </button>

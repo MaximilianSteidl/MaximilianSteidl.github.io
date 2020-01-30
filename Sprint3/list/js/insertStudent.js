@@ -182,3 +182,31 @@ function user_hinzufuegen()
 		
 	}
 }
+
+$(document).ready(function(){
+
+	$( ".pflichtfeld" )
+	  .focusout(function() {
+		var v_val = $(this).val();
+		var color = "inherit";
+	    var error_msg = "";
+  
+		
+		if(v_val == "" || v_val == null )
+		{
+			color = "orange";
+			error_msg += "Bitte das Feld Ausfuellen! ";
+		}
+		
+		if(v_val.length > 30)
+		{
+			color = "orange";
+			error_msg += "Das Feld darf nicht laenger als 30 Zeichen sein! ";
+		}
+		
+		$(this).css("border-color", color);
+		$(this).attr("title", error_msg);
+		
+	  });
+
+})
