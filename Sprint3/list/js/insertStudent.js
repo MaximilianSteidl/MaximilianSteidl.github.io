@@ -1,5 +1,12 @@
 var id;
 
+function blockSpecialChar(e){
+	var k;
+	document.all ? k = e.keyCode : k = e.which;
+	//alert(k)
+	return ((k > 64 && k < 91) || (k > 96 && k < 123) || k == 8 || k == 32 || k == 228 || k == 196 || k == 246 || k == 214 || k == 252 || k == 220 || k == 223);
+}
+	
 window.addEventListener("load", function () {
 	function ajaxLoadData() {
 		if (this.readyState == 4 && this.status == 200) {
@@ -234,5 +241,5 @@ $(document).ready(function(){
 			}
 		}
 	  });
-
+	
 })

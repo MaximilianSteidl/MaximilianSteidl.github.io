@@ -20,9 +20,9 @@
 	<p>Studenten Nummer: <span class="asteriks">*</span></p>
 	<input type="number" name="id" id="id" class="pflichtfeld">
 	<p>Vorname: <span class="asteriks">*</span></p>
-	<input type="text" name="firstname" id="firstname" class="pflichtfeld">
+	<input type="text" name="firstname" id="firstname" class="pflichtfeld" onkeypress="return blockSpecialChar(event)">
 	<p>Nachname: <span class="asteriks">*</span></p>
-	<input type="text" name="lastname" id="lastname" class="pflichtfeld">
+	<input type="text" name="lastname" id="lastname" class="pflichtfeld" onkeypress="return blockSpecialChar(event)">
 	<p>Studiengang: <span class="asteriks">*</span></p>
 	<input type="text" name="course" id="course" class="pflichtfeld">
   </div>
